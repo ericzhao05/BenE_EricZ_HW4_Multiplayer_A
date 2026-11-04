@@ -24,7 +24,7 @@ global.collideble = [
     obj_risingplatform,
     obj_brickwall,
     obj_platform,
-    //obj_box
+    obj_box
 ];
 
 global.lift_blockers = [
