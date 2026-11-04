@@ -1,8 +1,6 @@
 // Inherit the parent event
 event_inherited();
 
-
-
 if (!platform_saved) {
     if (instance_exists(trigger)) {
         platform_x = trigger.x;
@@ -21,6 +19,11 @@ if (!platform_saved) {
 
 if (platform_saved) {
     var should_exist = starts_enabled or triggered;
+	
+	if (triggered) {
+	    should_exist = !starts_enabled;
+	}
+
 
     if (!should_exist) {
         if (instance_exists(trigger)) {
