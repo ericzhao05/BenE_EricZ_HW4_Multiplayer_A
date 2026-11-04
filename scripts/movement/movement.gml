@@ -96,10 +96,12 @@ function player_movement(collidebles){
 		}
 	}
 	
+	
+	if (place_meeting(x, y, obj_death) || y > room_height) {
+	    died = true;
+	}
+
 	if (place_meeting(x, y+1, obj_death)){
-		hit = true;
-		xspd = 0;
-		yspd = 0;
 	
 		if (do_particles == 0){
 			do_particles = 1;

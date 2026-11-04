@@ -1,1 +1,0 @@
-trigger =inst_78833A37;
