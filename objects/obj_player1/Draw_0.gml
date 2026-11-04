@@ -1,3 +1,3 @@
-if (!hit){
+if (!died){
 	draw_self();
 }

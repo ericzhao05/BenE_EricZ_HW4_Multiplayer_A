@@ -31,7 +31,7 @@
   },
   "name":"BenE_EricZ_HW4_Multiplayer_A (2)",
   "resources":[
-    {"id":{"name":"Ideas","path":"notes/Ideas/Ideas.yy",},},
+    {"id":{"name":"PatchNotes","path":"notes/PatchNotes/PatchNotes.yy",},},
     {"id":{"name":"ToDoList","path":"notes/ToDoList/ToDoList.yy",},},
     {"id":{"name":"obj_arrow","path":"objects/obj_arrow/obj_arrow.yy",},},
     {"id":{"name":"obj_box","path":"objects/obj_box/obj_box.yy",},},

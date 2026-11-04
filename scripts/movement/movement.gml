@@ -7,6 +7,8 @@ function move_collide(wall){
 	for (var i = 0; i < abs(xspd); i += 1){
 		var step_x = sign(xspd);
 
+		//quick workaround for box collision in x
+		if (!place_meeting(x + .1, y, obj_box)) || (!place_meeting(x - .1, y, obj_box)){
 		if (!place_meeting(x + step_x, y, wall)){
 			var rider = instance_place(x, y - 1, [obj_player1, obj_player2]);
 
@@ -22,6 +24,7 @@ function move_collide(wall){
 		} else {
 			xspd = 0;
 		}
+		}
 	}
 
 
@@ -35,7 +38,9 @@ function move_collide(wall){
 	    var blocked = false;
 
 	   
-	    if (step_y < 0) {
+	    //workaround for box collision in y
+		if (!place_meeting(x, y + step_y, obj_box)){
+		if (step_y < 0) {
 	        top_player = instance_place(x, y - 1, [obj_player1, obj_player2]);
 
 	        if (top_player != noone) {
@@ -72,6 +77,9 @@ function move_collide(wall){
 	    else {
 	        y += step_y;
 	    }
+	} else{
+		yspd = 0;
+	}
 	}
 
 }
@@ -79,7 +87,7 @@ function move_collide(wall){
 function player_movement(collidebles){
 	var hmove = keyboard_check(key_right) - keyboard_check(key_left);
 	var jump = keyboard_check_pressed(key_jump);
-	var grounded = place_meeting(x, y + 1, collidebles)
+	var grounded = place_meeting(x, y + 1, collidebles) || place_meeting (x, y + 1, obj_box);
 
 	xspd = move * hmove;
 

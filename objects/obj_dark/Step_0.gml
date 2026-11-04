@@ -14,7 +14,7 @@ if (instance_exists(trigger2)) {
     }
 }
 
-light_amount = lerp(light_amount, target, 0.1);
+light_amount = lerp(light_amount, target, 0.05);
 
 if (abs(light_amount - target) < 0.01) {
     light_amount = target;

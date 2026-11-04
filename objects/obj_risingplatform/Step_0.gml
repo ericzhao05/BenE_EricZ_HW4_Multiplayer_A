@@ -1,7 +1,7 @@
 if (instance_exists(trigger)) {
     var old_scale = image_yscale;
 
-    var players = [obj_player1, obj_player2];
+    var players = [obj_player1, obj_player2, obj_box];
  
 
     if (trigger.triggered) {
@@ -38,6 +38,7 @@ if (instance_exists(trigger)) {
 
             obj_player1.y = old_y[0];
             obj_player2.y = old_y[1];
+			obj_box.y = old_y[2];
         }
     }
 }

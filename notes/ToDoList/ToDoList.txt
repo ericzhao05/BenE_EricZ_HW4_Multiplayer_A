@@ -2,9 +2,9 @@ Notes:
 Make levels more balanced for the players (they need to both contribute)
 
 To Do:
-
-- Figure out how to move boxes
-Tutorial Level(?)
+Add gravity to boxes (basically make them an uncontrollable player)
+Fix players getting stuck in box if box touches wall 
+Make Room1 a tutorial level/menu screen (Ben)
 
 Add collisions to buttons(?) - might not need this
 Music/SFX (add last)
@@ -19,3 +19,4 @@ Trampoline
 Rising platforms (just needs collisions)
 Players can jump with players on top of them
 Doors to complete the levels require both players to activate it
+Figure out how to move boxes

@@ -14,7 +14,7 @@ if (!level_complete) {
         level_complete = true;
 
         if (room != Room3) {
-            room_goto_next();
+            time_source_start(next_room);
         }
     }
 }
@@ -23,5 +23,9 @@ if (!level_complete) {
 
 
 if (obj_player1.died || obj_player2.died) {
-    room_restart();
+    time_source_start(dead_timer);
+}
+
+if (keyboard_check_pressed(ord("R"))){
+	room_restart();
 }

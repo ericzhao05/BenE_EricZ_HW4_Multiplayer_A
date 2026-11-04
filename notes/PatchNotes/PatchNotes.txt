@@ -1,0 +1,9 @@
+11/4 - 8am - Ben
+	Replaced some boxes with bricks in Room2
+	Moved around objects in Room1
+	Added collisions to boxes (still gets stuck in walls and can get player stuck too)
+	Added restart key (R)
+	Added delay after death to see effects
+	Tweaked timer on lamps to make it more visible
+	Added finish collisions to display text near doors
+	Added timer on level finish

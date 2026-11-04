@@ -13,7 +13,7 @@ draw_sprite_ext(
     spr_dark, 1,
     x, draw_y,
     image_xscale, image_yscale * fog_direction,
-    0, c_white, 1
+    0, c_white, .75
 );
 
 

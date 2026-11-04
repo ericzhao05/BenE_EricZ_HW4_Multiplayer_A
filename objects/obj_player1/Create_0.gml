@@ -13,7 +13,6 @@ double_jump = false;
 
 do_particles = 0;
 
-hit = false;
 died = false;
 
 depth = -10;
