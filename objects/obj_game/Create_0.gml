@@ -49,7 +49,7 @@ move_on = function(){
 	room_goto_next();
 }
 
-next_room = time_source_create(time_source_game, 1.5, time_source_units_seconds, move_on());
+next_room = time_source_create(time_source_game, 1.5, time_source_units_seconds, move_on);
 
 //restart timer
 dead_restart = function(){
