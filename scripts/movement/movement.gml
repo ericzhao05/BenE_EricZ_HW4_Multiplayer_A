@@ -4,27 +4,49 @@ function init_movement(){
 }
 
 function move_collide(wall){
-	for (var i = 0; i < abs(xspd); i += 1){
-		var step_x = sign(xspd);
+	for (var i = 0; i < abs(xspd); i += 1) {
+	    var step_x = sign(xspd);
 
-		//quick workaround for box collision in x
-		if (!place_meeting(x + .1, y, obj_box)) || (!place_meeting(x - .1, y, obj_box)){
-		if (!place_meeting(x + step_x, y, wall)){
-			var rider = instance_place(x, y - 1, [obj_player1, obj_player2]);
+	  
+	    var box = instance_place(x + step_x, y, obj_box);
+	    var box_old_x = 0;
 
-			x += step_x;
+	    if (box != noone) {
+	        box_old_x = box.x;
 
-			if (rider != noone){
-				with (rider){
-					if (!place_meeting(x + step_x, y, wall)){
-						x += step_x;
-					}
-				}
-			}
-		} else {
-			xspd = 0;
-		}
-		}
+	        with (box) {
+	            if (!place_meeting(x + step_x, y, wall)) {
+	                x += step_x;
+	            }
+	        }
+	    }
+
+	    
+	    if (!place_meeting(x + step_x, y, wall)) {
+	        var rider = instance_place(
+	            x, y - 1, [obj_player1, obj_player2]
+	        );
+
+	        x += step_x;
+
+	      
+	        if (rider != noone) {
+	            with (rider) {
+	                if (!place_meeting(x + step_x, y, wall)) {
+	                    x += step_x;
+	                }
+	            }
+	        }
+	    }
+	    else {
+	       
+	        if (box != noone) {
+	            box.x = box_old_x;
+	        }
+
+	        xspd = 0;
+	        break;
+	    }
 	}
 
 
