@@ -10,3 +10,4 @@
 	
 11/9 - Ben
 	Added horizontal moving platforms
+	Fixed text to show up properly over finish doors

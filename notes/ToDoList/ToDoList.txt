@@ -5,7 +5,6 @@ To Do:
 Add gravity to boxes (basically make them an uncontrollable player) and have platforms affect them
 Make Room1 a tutorial level/menu screen (Ben)
 Checkpoints
-Fix text to show up in a fixed spot on the camera (the door prompts)
 Make more levels geared towards player 2 - areas where you need to jump across a larger gap that P1 can't make at first
 Make more obvious indicators so that there's no blind jumps
 Add respawn at checkpoint button (keep it separate from Restart Level button (R)
@@ -29,3 +28,4 @@ Doors to complete the levels require both players to activate it
 Figure out how to move boxes
 Fix players getting stuck in box if box touches wall
 Horizontal moving platforms
+Fix text to show up in a fixed spot on the camera (the door prompts)
