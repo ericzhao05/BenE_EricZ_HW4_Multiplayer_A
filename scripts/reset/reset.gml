@@ -29,6 +29,17 @@ function dead_restart(){
 			double_jump = false;
 			do_particles = 0;
 			died = false;
+
+			
+			if (!obj_game.manual_reset) {
+				death_count++;
+
+				if (death_count >= 3 and rescue_count < rescue_max and global.timer < 30 * 60) {
+					death_count = 0;
+					rescue_count++;
+					instance_create_layer(x, y - 96, "Instances", obj_clock);
+				}
+			}
 		}
 	}
 
@@ -47,6 +58,16 @@ function dead_restart(){
 			double_jump = false;
 			do_particles = 0;
 			died = false;
+			
+			if (!obj_game.manual_reset) {
+				death_count++;
+
+				if (death_count >= 3 and rescue_count < rescue_max and global.timer < 30 * 60) {
+					death_count = 0;
+					rescue_count++;
+					instance_create_layer(x, y - 96, "Instances", obj_clock);
+				}
+			}
 		}
 	}
 }

@@ -1,0 +1,1 @@
+trigger = inst_7225DCCE;
