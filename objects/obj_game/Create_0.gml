@@ -24,7 +24,8 @@ global.collideble = [
     obj_risingplatform,
     obj_brickwall,
     obj_platform,
-    obj_box
+    obj_box,
+	obj_moving_platform
 ];
 
 global.lift_blockers = [
@@ -34,7 +35,8 @@ global.lift_blockers = [
     obj_platform,
     obj_player1,
     obj_player2,
-    obj_box
+    obj_box,
+	obj_moving_platform
 ];
 
 p1_x = obj_player1.x;
