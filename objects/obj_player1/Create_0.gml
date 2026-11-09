@@ -17,4 +17,6 @@ died = false;
 
 depth = -10;
 
+last_checkpoint = noone; 
+
 init_movement();

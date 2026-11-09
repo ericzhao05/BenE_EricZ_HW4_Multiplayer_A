@@ -44,6 +44,8 @@ p2_y = obj_player2.y;
 
 depth = -10;
 
+global.timer = 100 * 30; 
+
 //next room timer
 move_on = function(){
 	room_goto_next();
@@ -51,9 +53,5 @@ move_on = function(){
 
 next_room = time_source_create(time_source_game, 1.5, time_source_units_seconds, move_on);
 
-//restart timer
-dead_restart = function(){
-	room_restart();
-}
 
-dead_timer = time_source_create(time_source_game, 3, time_source_units_seconds, dead_restart);
+dead_timer = time_source_create(time_source_game, 1, time_source_units_seconds, dead_restart);

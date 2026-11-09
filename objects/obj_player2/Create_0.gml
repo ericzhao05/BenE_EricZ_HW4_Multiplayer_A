@@ -16,6 +16,8 @@ do_particles = 0;
 
 died = false;
 
+last_checkpoint = noone;
+
 depth = -10;
 
 init_movement();
