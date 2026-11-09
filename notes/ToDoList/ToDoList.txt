@@ -7,7 +7,7 @@ Make Room1 a tutorial level/menu screen (Ben)
 Checkpoints
 Make more levels geared towards player 2 - areas where you need to jump across a larger gap that P1 can't make at first
 Make more obvious indicators so that there's no blind jumps
-Add respawn at checkpoint button (keep it separate from Restart Level button (R)
+Add respawn at checkpoint button (keep it separate from Restart Level button (R))
 Add maybe one or two more item obstacles/ideas
 Add back timer for negative feedback (Ben)
 Add score system to tie in with positive feedback - All coins in level + minimal deaths = A+... etc
