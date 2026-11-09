@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_coin",
+  "%Name":"obj_clock",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_coin",
+  "name":"obj_clock",
   "overriddenProperties":[],
   "parent":{
     "name":"game_room",
@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_coin",
-    "path":"sprites/spr_coin/spr_coin.yy",
+    "name":"spr_clock",
+    "path":"sprites/spr_clock/spr_clock.yy",
   },
   "spriteMaskId":null,
   "visible":true,

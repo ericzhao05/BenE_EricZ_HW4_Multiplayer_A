@@ -42,7 +42,12 @@ p1_y = obj_player1.y;
 p2_x = obj_player2.x;
 p2_y = obj_player2.y;
 
-depth = -10;
+depth = 50;
+
+time_limit = 100;
+global.timer = time_limit * 60;
+
+manual_reset = false;
 
 //next room timer
 move_on = function(){
@@ -51,9 +56,5 @@ move_on = function(){
 
 next_room = time_source_create(time_source_game, 1.5, time_source_units_seconds, move_on);
 
-//restart timer
-dead_restart = function(){
-	room_restart();
-}
 
-dead_timer = time_source_create(time_source_game, 3, time_source_units_seconds, dead_restart);
+dead_timer = time_source_create(time_source_game, 1, time_source_units_seconds, dead_restart);

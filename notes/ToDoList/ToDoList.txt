@@ -4,6 +4,66 @@ Make levels more balanced for the players (they need to both contribute)
 To Do:
 Add gravity to boxes (basically make them an uncontrollable player) and have platforms affect them
 Make Room1 a tutorial level/menu screen (Ben)
+
+Horizontal moving platforms
+
+Make speed required: timed doors, collapsing platforms, outrunning something.
+ Show the difference: make the first room teach it (a high ledge only P1 can reach, a timed door only P2 can beat).
+ 
+Make more levels geared towards player 2 - areas where you need to jump across a larger gap that P1 can't make at first
+Make more obvious indicators so that there's no blind jumps (people liked blind jumps)
+
+Add maybe one or two more item obstacles/ideas
+Add back timer for negative feedback (Ben)
+
+
+Add collisions to buttons(?) - might not need this
+Music/SFX (add last)
+
+Negative Feedback Idea: Timer that ticks down if only one player is by the door and the other isn't
+Positive Feedback Idea: Collectibles that can give upgrades (hidden/visible coins?)
+
+Music/SFX (add last)
+
+Negative Feedback Idea: A rescue clock after deaths. After a player dies, say, 3 times in a level, a bonus clock spawns near their checkpoint. Count deaths in dead_restart()
+
+Completed:
+Walls you can walk through to show hidden sections
+Death floor object
+Trampoline
+Rising platforms (just needs collisions)
+Players can jump with players on top of them
+Doors to complete the levels require both players to activate it
+Figure out how to move boxes
+
+Checkpoints (eric)
+Add respawn at checkpoint button T (keep it separate from Restart Level button (R))
+Level skips (Eric)
+Fix text to show up in a fixed spot on the camera (the door prompts)
+
+Positive feedback loop: Doing well gives you more time, and more time makes it easier to keep doing well.
+The loop:
+1. Collect a clock -> global.timer += 15 * 60, so you gain 15 seconds and see the "+15s" popup.
+2. More time on the clock -> you're under less pressure, so you can slow down, think through the puzzle and coordinate with your partner.
+3. Less pressure -> you can take detours and try risky jumps to reach the next clock. Losing a few seconds to an attempt no longer ends the run.
+4. Another clock -> even more time → back to step 2.
+
+The negative feedback loop: the rescue clock
+A struggling player gets help, and that help makes them struggle less.
+The loop:
+1. The player dies. They go back to their checkpoint and lose about 1 second of respawn time, plus the progress they'd made.
+2. The timer keeps dropping -> more pressure -> rushed jumps -> more deaths. Left alone, this would spiral downwards.
+3. Once they've died 3 times and have under 30 seconds left, a rescue clock appears just above their respawn point. They grab it: +15 seconds.
+4. More time -> less pressure -> they can slow down and make the jump carefully → fewer deaths → the spiral stops.
+
+
+
+Notes:
+Make levels more balanced for the players (they need to both contribute)
+
+To Do:
+Add gravity to boxes (basically make them an uncontrollable player) and have platforms affect them
+Make Room1 a tutorial level/menu screen (Ben)
 Checkpoints
 Horizontal moving platforms
 Fix text to show up in a fixed spot on the camera (the door prompts)
