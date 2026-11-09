@@ -58,3 +58,34 @@ The loop:
 
 
 
+Notes:
+Make levels more balanced for the players (they need to both contribute)
+
+To Do:
+Add gravity to boxes (basically make them an uncontrollable player) and have platforms affect them
+Make Room1 a tutorial level/menu screen (Ben)
+Checkpoints
+Horizontal moving platforms
+Fix text to show up in a fixed spot on the camera (the door prompts)
+Make more levels geared towards player 2 - areas where you need to jump across a larger gap that P1 can't make at first
+Make more obvious indicators so that there's no blind jumps
+Add respawn at checkpoint button (keep it separate from Restart Level button (R)
+Add maybe one or two more item obstacles/ideas
+Add back timer for negative feedback (Ben)
+Add score system to tie in with positive feedback - All coins in level + minimal deaths = A+... etc
+
+Add collisions to buttons(?) - might not need this
+Music/SFX (add last)
+
+Negative Feedback Idea: Timer that ticks down if only one player is by the door and the other isn't
+Positive Feedback Idea: Collectibles that can give upgrades (hidden/visible coins?)
+
+Completed:
+Walls you can walk through to show hidden sections
+Death floor object
+Trampoline
+Rising platforms (just needs collisions)
+Players can jump with players on top of them
+Doors to complete the levels require both players to activate it
+Figure out how to move boxes
+Fix players getting stuck in box if box touches wall 
