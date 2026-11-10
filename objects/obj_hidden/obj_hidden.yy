@@ -9,8 +9,8 @@
   "name":"obj_hidden",
   "overriddenProperties":[],
   "parent":{
-    "name":"traps",
-    "path":"folders/Objects/traps.yy",
+    "name":"game_room",
+    "path":"folders/Objects/game_room.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -7,3 +7,7 @@
 	Tweaked timer on lamps to make it more visible
 	Added finish collisions to display text near doors
 	Added timer on level finish
+	
+11/9 - Ben
+	Added horizontal moving platforms
+	Fixed text to show up properly over finish doors
