@@ -17,4 +17,13 @@ died = false;
 
 depth = -10;
 
+last_checkpoint = noone; 
+
+death_count = 0;
+
+rescue_count = 0;
+rescue_max = 2;
+
 init_movement();
+
+
