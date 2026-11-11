@@ -88,7 +88,7 @@ function move_collide(wall){
 	    }
 
 	    if (blocked) {
-	        // undo the upper player's movement if this step failed.
+	        // undom if fail
 	        if (top_player != noone) {
 	            top_player.y = top_old_y;
 	        }
@@ -114,6 +114,10 @@ function player_movement(collidebles){
 	xspd = move * hmove;
 
 	if (grounded){
+		if(keyboard_check_pressed(key_jump)){
+			audio_play_sound(sfx_jump, 0, false);
+		}
+		
 		double_jump = false;
 	}
 
@@ -128,6 +132,7 @@ function player_movement(collidebles){
 	
 	
 	if (place_meeting(x, y, obj_death) || y > room_height) {
+		audio_play_sound(sfx_death, 0, false);
 	    died = true;
 	}
 
