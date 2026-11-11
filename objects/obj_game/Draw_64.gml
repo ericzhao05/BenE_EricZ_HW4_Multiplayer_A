@@ -1,6 +1,6 @@
 var gui_center_x = display_get_gui_width() / 2;
 
-if (room != Room0){
+if (room != Room0 and room != Room5){
 	draw_set_font(fnt_msg);
 	draw_set_color(c_white);
 	draw_set_halign(fa_center);
