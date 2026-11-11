@@ -1,5 +1,9 @@
+if (room == Room0){
+	instructions = false;
+}
+
 if (room == Room0 or room == Room1) {
-        global.final_score = 0;
+	global.final_score = 0;
 }
 
 if (room != Room0){
