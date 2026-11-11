@@ -1,6 +1,8 @@
-if (room != Room0){
-	global.coin_counter = 0;
+if (room == Room0 or room == Room1) {
+        global.final_score = 0;
+}
 
+if (room != Room0){
 	level_complete = false;
 	countdown = 30;
 
@@ -39,11 +41,6 @@ if (room != Room0){
 	    obj_box,
 		obj_moving_platform
 	];
-
-	p1_x = obj_player1.x;
-	p1_y = obj_player1.y;
-	p2_x = obj_player2.x;
-	p2_y = obj_player2.y;
 
 	depth = 50;
 

@@ -1,4 +1,4 @@
-if (room != Room0){
+if (room != Room0 and room != Room5){
 	if (!level_complete and global.timer > 0) {
 		global.timer--;
 
@@ -23,21 +23,21 @@ if (room != Room0){
 	    if (player1_at_exit and player2_at_exit) {
 	        level_complete = true;
 
-	        if (room != Room3) {
-	            time_source_start(next_room);
-	        }
+	        global.final_score += ceil(global.timer / 60);
+
+	        time_source_start(next_room);
 	    }
 	}
-	
+
 	if (obj_player1.died || obj_player2.died) {
 	    time_source_start(dead_timer);
 	}
 
-	if (keyboard_check_pressed(ord("R"))){
+	if (keyboard_check_pressed(ord("R")) and !level_complete) {
 		room_restart();
 	}
 
-	if (keyboard_check_pressed(ord("T"))) {
+	if (keyboard_check_pressed(ord("T")) and !level_complete) {
 		manual_reset = true;
 
 		obj_player1.died = true;
@@ -62,7 +62,4 @@ if (keyboard_check_pressed(ord("3"))) {
 }
 if (keyboard_check_pressed(ord("4"))) {
 	room_goto(Room4);
-}
-if (keyboard_check_pressed(ord("5"))) {
-    room_goto(Room4_1);
 }
