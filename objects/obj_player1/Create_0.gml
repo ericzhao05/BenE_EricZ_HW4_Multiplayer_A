@@ -3,6 +3,8 @@ key_left  = ord("A");
 key_right = ord("D");
 key_jump  = ord("W");
 
+mask_index = spr_player1_idle;
+
 //tuning variables
 move = 3;              
 grav = 0.3;
