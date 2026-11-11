@@ -39,6 +39,12 @@ if (keyboard_check_pressed(ord("2"))) {
 if (keyboard_check_pressed(ord("3"))) {
 	room_goto(Room3);
 }
+if (keyboard_check_pressed(ord("4"))) {
+	room_goto(Room4);
+}
+if (keyboard_check_pressed(ord("5"))) {
+    room_goto(Room4_1);
+}
 
 if (obj_player1.died || obj_player2.died) {
     time_source_start(dead_timer);

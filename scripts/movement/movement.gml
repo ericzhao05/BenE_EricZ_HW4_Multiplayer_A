@@ -88,7 +88,7 @@ function move_collide(wall){
 	    }
 
 	    if (blocked) {
-	        // undo the upper player's movement if this step failed.
+	        // undom if fail
 	        if (top_player != noone) {
 	            top_player.y = top_old_y;
 	        }
