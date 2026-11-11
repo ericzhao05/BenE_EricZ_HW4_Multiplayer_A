@@ -46,6 +46,19 @@ if (room != Room0 and room != Room5){
 
 		manual_reset = false;
 	}
+} else if (room == Room0){
+	if (keyboard_check(vk_tab)){
+		instructions = true;
+	} else{
+		instructions = false;
+	}
+	if (keyboard_check_pressed(vk_enter)){
+		room_goto_next();
+	}
+} else if (room == Room5){
+	if (keyboard_check_pressed(vk_enter)){
+		room_goto(Room0);
+	}
 }
 
 if (keyboard_check_pressed(ord("0"))){

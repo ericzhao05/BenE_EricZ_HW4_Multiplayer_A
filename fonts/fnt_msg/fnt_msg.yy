@@ -110,7 +110,7 @@
     "9647":{"character":9647,"h":79,"offset":10,"shift":40,"w":20,"x":395,"y":407,},
   },
   "hinting":0,
-  "includeTTF":false,
+  "includeTTF":true,
   "interpreter":0,
   "italic":false,
   "kerningPairs":[],
@@ -138,6 +138,6 @@
     "name":"Default",
     "path":"texturegroups/Default",
   },
-  "TTFName":"",
+  "TTFName":"D:\\benjy\\NYU\\2026Fall\\GameDev\\HW\\Assignment4\\BenE_EricZ_HW4_Multiplayer_A\\fonts\\fnt_msg\\Electrolize-Regular.ttf",
   "usesSDF":false,
 }
