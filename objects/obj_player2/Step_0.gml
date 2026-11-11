@@ -1,11 +1,7 @@
 if (died) {
 	exit;
 }
-if (xspd != 0) {
-    sprite_index = spr_player2_walk;
-} else {
-    sprite_index = spr_player2_idle;
-}
+
 
 if (xspd != 0) {
 	image_xscale = sign(xspd) * base_scale;

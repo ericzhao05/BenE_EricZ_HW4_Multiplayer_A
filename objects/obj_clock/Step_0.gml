@@ -3,5 +3,7 @@ if (place_meeting(x, y, obj_player1) or (place_meeting(x, y, obj_player2))){
 
 	instance_create_depth(x, y - 32, -20, obj_time_popup);
 
+	audio_play_sound(sfx_pickupClock, 0, false);
+	
 	instance_destroy();
 }

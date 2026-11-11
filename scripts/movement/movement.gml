@@ -114,6 +114,10 @@ function player_movement(collidebles){
 	xspd = move * hmove;
 
 	if (grounded){
+		if(keyboard_check_pressed(key_jump)){
+			audio_play_sound(sfx_jump, 0, false);
+		}
+		
 		double_jump = false;
 	}
 
@@ -128,6 +132,7 @@ function player_movement(collidebles){
 	
 	if (place_meeting(x, y, obj_death) || y > room_height) {
 	    if (!died) {
+	        audio_play_sound(sfx_death, 0, false);
 	        spawn_particles(x, y, 50);
 	    }
 	    died = true;
