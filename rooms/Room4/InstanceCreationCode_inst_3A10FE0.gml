@@ -1,1 +1,0 @@
-trigger = inst_52BC35A5;

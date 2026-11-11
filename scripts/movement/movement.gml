@@ -60,7 +60,7 @@ function move_collide(wall){
 	    var blocked = false;
 
 	   
-	    //workaround for box collision in y
+	    //box collision in y
 		if (!place_meeting(x, y + step_y, obj_box)){
 		if (step_y < 0) {
 	        top_player = instance_place(x, y - 1, [obj_player1, obj_player2]);
@@ -88,7 +88,7 @@ function move_collide(wall){
 	    }
 
 	    if (blocked) {
-	        // undom if fail
+	        // undo if fail
 	        if (top_player != noone) {
 	            top_player.y = top_old_y;
 	        }
@@ -126,21 +126,11 @@ function player_movement(collidebles){
 		}
 	}
 	
-	
 	if (place_meeting(x, y, obj_death) || y > room_height) {
+	    if (!died) {
+	        spawn_particles(x, y, 50);
+	    }
 	    died = true;
-	}
-
-	if (place_meeting(x, y+1, obj_death)){
-	
-		if (do_particles == 0){
-			do_particles = 1;
-		}
-	}
-
-	if (do_particles == 1) {
-		spawn_particles(x, y, 50);
-		do_particles = 2;
 	}
 	
 	if (place_meeting(x, y+1, obj_trampoline)){

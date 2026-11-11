@@ -3,10 +3,11 @@ if (died) {
 }
 
 if (xspd != 0) {
-    sprite_index = spr_player1_walk;
-} else {
-    sprite_index = spr_player1_idle;
+	image_xscale = sign(xspd) * base_scale;
 }
+
+
+player_movement(global.collideble);
 
 var on_ground = place_meeting(x, y + 1, global.collideble) || place_meeting(x, y + 1, obj_box);
 
@@ -25,9 +26,6 @@ if (!on_ground) {
     sprite_index = spr_player1_idle;
     image_speed = 1;
 }
-
-player_movement(global.collideble);
-
 
 if (on_ground && yspd < 0 && keyboard_check_pressed(key_jump)) {
     instance_create_depth(x, y, depth + 1, obj_player1_jump_fx);
