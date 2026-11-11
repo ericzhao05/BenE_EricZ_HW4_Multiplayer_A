@@ -6,10 +6,10 @@ if (xspd != 0) {
 	image_xscale = sign(xspd) * base_scale;
 }
 
+var on_ground = place_meeting(x, y + 1, global.collideble) || place_meeting(x, y + 1, obj_box);
 
 player_movement(global.collideble);
 
-var on_ground = place_meeting(x, y + 1, global.collideble) || place_meeting(x, y + 1, obj_box);
 
 if (!on_ground) {
     sprite_index = spr_player1_jump;
