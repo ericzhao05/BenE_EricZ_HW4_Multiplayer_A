@@ -4,6 +4,10 @@ key_left  = vk_left;
 key_right = vk_right;
 key_jump  = vk_up;
 
+mask_index = spr_player2_idle;
+base_scale = image_xscale;
+dust_timer = 0;
+
 //tuning variables
 move = 6;
 grav = 0.3;
